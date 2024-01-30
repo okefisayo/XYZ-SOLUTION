@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xyz-solution-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xyz-solution
+  template:
+    metadata: 
+      labels:
+        app: xyz-solution
+    spec:
+      containers:
+        - name: xyz-solution
+          image: okefisayo/xyz-solution
